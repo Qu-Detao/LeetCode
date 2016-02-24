@@ -13,12 +13,12 @@ Related problem: Reverse Integer
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
-	    uint32_t rn = 0;
-	    int i = 32;
-	    while (i--) {
-		    rn = (rn << 1) + n % 2;
-		    n /= 2;
-	    }
-	    return rn;
+        uint32_t rn = 0;
+        int i = 32;
+        while (i--) {
+            rn = (rn << 1) + n % 2;
+            n /= 2;
+        }
+        return rn;
     }
 };

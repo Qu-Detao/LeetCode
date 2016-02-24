@@ -14,11 +14,12 @@ and the nodes have the same value.
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        return (p != NULL && q != NULL && p->val == q->val 
-        	&& isSameTree(p->left, q->left) && isSameTree(p->right, q->right) 
-        	|| (p == NULL && q == NULL));
+        return (p != NULL && q != NULL && p->val == q->val
+            && isSameTree(p->left, q->left) && isSameTree(p->right, q->right)
+            || (p == NULL && q == NULL));
     }
 };

@@ -10,11 +10,10 @@ Note that 1 is typically treated as an ugly number.
 class Solution {
 public:
     bool isUgly(int num) {
-        if(num < 1)    
+        if (num < 1)
             return false;
-        for(int i = 2; i <= 5; ++i)
-        {
-            while(num % i == 0)
+        for (int i = 2; i <= 5; ++i) {
+            while (num % i == 0)
                 num /= i;
         }
         return num == 1;
