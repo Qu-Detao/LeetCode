@@ -17,4 +17,9 @@ After third round, the three bulbs are [on, off, off].
 So you should return 1, because there is only one bulb is on.
 */
 
-
+class Solution {
+public:
+    int bulbSwitch(int n) {
+        return int(sqrt(n));
+    }
+};
