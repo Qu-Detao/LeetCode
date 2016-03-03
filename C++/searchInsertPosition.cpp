@@ -14,6 +14,22 @@ Here are few examples.
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
+        int head = 0, tail = nums.size();
+        while(head < tail){
+            int mid = head + (tail - head) / 2;
+            if(nums[mid] >= target)
+                tail = mid;
+            else
+                head = mid + 1;
+        }
+        return head;
+    }
+};
+
+/*
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
         if(nums.size() == 0 || nums[0] >= target)
             return 0;
         for(int i = 0; i < (int)nums.size() - 1; ++i){
@@ -23,3 +39,4 @@ public:
         return nums.size();
     }
 };
+*/
