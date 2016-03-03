@@ -11,6 +11,19 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int a = 0, b = 0;
+        for (int j = 0; j < nums.size(); ++j) {
+            b = a & (b ^ nums[j]);
+            a = b | (a ^ nums[j]);
+        }
+        return a;
+    }
+};
+
+/*
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int a = 0, b = 0;
         for(int c : nums){
             int ta = (~a & b & c) | (a & ~b & ~c);
             b = (~a & ~b & c) | (~a & b & ~c);
@@ -20,6 +33,7 @@ public:
         return a|b;
     }
 };
+*/
 
 /*
 class Solution {
